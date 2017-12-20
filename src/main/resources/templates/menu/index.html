@@ -17,5 +17,18 @@
     <a href="/category">Categories</a>
 </nav>
 
+<!--<ul th:each="menu : ${menus}">
+    <li th:text="${menu.name}"><a href="/menu/view/{menuId}">Menu</a></li>
+</ul>-->
+
+<ul>
+    <li th:each="menu : ${menus}">
+        <a th:href="@{'/menu/view/' + ${menu.id}}" th:text="${menu.name}"></a>
+    </li>
+</ul>
+
+
+<nav><a href="/menu/add">Add Menu</a></nav>
+
 </body>
 </html>
