@@ -15,8 +15,7 @@
 </ul>-->
 
 <ul>
-    <li th:each="menu : ${menu.cheeses}">
-        <a th:href="@{'/menu/view/' + ${menu.id}}" th:text="${menu.name}"></a>
+    <li th:each="menu : ${menu.cheeses}" th:text="${menu.name}">
     </li>
 </ul>
 
